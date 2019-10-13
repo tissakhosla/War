@@ -32,10 +32,34 @@ console.log(playerOne, playerTwo);
 // var playerOne = new(deckOne, inPlayOne);
 // var playerTwo = new(deckTwo, inPlayTwo);
 
+// Function passing in an index 
+// function gameLogic(index) {
+// 	for (var i = 1; i <= 10; i++) {
+// 		if (playerOne[index] === playerTwo[index]) {
+// 			console.log("___o_0--->WAR<---O_o___")
+// 			//the game function on playerNum[4]
+			
+// 		} else if (playerOne[index] > playerTwo[index]) {
+// 				console.log("-----*One*-----");
+// 				playerOne.push(playerTwo.shift());
+// 				playerOne.push(playerOne.shift());
+				
+// 			} else if (playerTwo[index] > playerOne[index]) {
+// 					console.log("-----*Two*-----")
+// 					playerTwo.push(playerOne.shift());
+// 					playerTwo.push(playerOne.shift());
+					
+// 				}
+// 	return console.log(playerOne, playerTwo);
+// }
+
+// gameLogic(0);
+
 // BUILD v4
 for (var i = 1; i <= 10; i++) {
 	if (playerOne[0] === playerTwo[0]) {
-		console.log("it's a tie! HOORAY")
+		console.log("___o_0--->WAR<---O_o___")
+		//the game function on playerNum[4]
 		console.log(playerOne, playerTwo);
 	} else if (playerOne[0] > playerTwo[0]) {
 			console.log("-----*One*-----");
@@ -48,6 +72,7 @@ for (var i = 1; i <= 10; i++) {
 				playerTwo.push(playerOne.shift());
 				console.log(playerOne, playerTwo);
 			}
+console.log(`turn ${i}`)
 }
 
 
@@ -107,4 +132,3 @@ for (var i = 1; i <= 10; i++) {
 // 					console.log(playOne, playTwo);
 // 			}
 // }
-
