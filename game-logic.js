@@ -54,13 +54,29 @@ console.log(playerOne, playerTwo);
 // }
 
 // gameLogic(0);
-
-// BUILD v4
-for (var i = 1; i <= 10; i++) {
+//WAR
+// function war() {
+// 	if (playerOne[3] > playerTwo[3]) {
+// 		console.log("--WAR--ONE--")
+// 		console.log(playerOne.splice(0,4))
+// 		playerOne.concat(playerTwo.splice(0,4))
+// 		playerOne.concat(playerOne.shift())
+// 	} else if (playerTwo[3] > playerOne[3]) {
+// 			console.log("--WAR--TWO--")
+// 			console.log(playerOne.splice(0,4))
+// 			playerTwo.concat(playerOne.splice(0,4))
+// 			playerTwo.concat(playerTwo.shift())
+// 		} else {
+// 				console.log("AGAIN!")
+// 			}
+// 	console.log(playerOne, playerTwo);
+// }
+// CURRENT BUILD v4
+for (var i = 1; i <= 1; i++) {
 	if (playerOne[0] === playerTwo[0]) {
 		console.log("___o_0--->WAR<---O_o___")
-		//the game function on playerNum[4]
-		console.log(playerOne, playerTwo);
+		war();
+		// console.log(playerOne, playerTwo);
 	} else if (playerOne[0] > playerTwo[0]) {
 			console.log("-----*One*-----");
 			playerOne.push(playerTwo.shift());
@@ -69,7 +85,7 @@ for (var i = 1; i <= 10; i++) {
 		} else if (playerTwo[0] > playerOne[0]) {
 				console.log("-----*Two*-----")
 				playerTwo.push(playerOne.shift());
-				playerTwo.push(playerOne.shift());
+				playerTwo.push(playerTwo.shift());
 				console.log(playerOne, playerTwo);
 			}
 console.log(`turn ${i}`)
