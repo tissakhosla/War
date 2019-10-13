@@ -56,20 +56,28 @@ console.log(playerOne, playerTwo);
 // gameLogic(0);
 //WAR
 function war(index) {
+	if (index > 3) {
+			alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`);
+			index = Math.min(index, Math.min(playerOne.length, playerTwo.length) - 1)
+			alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`)
+		}
+		
+
 	if (playerOne[index] > playerTwo[index]) {
-		console.log("--WAR--ONE--")
-		playerOne = playerOne.concat(playerTwo.splice(0,index+1))
-		playerOne.push(playerOne.shift())
+		console.log("--WAR--ONE--");
+		playerOne = playerOne.concat(playerTwo.splice(0,index+1));
+		playerOne.push(playerOne.shift());
 	} else if (playerTwo[index] > playerOne[index]) {
-			console.log("--WAR--TWO--")
-			playerTwo = playerTwo.concat(playerOne.splice(0,index+1))
-			playerTwo.push(playerTwo.shift())
+			console.log("--WAR--TWO--");
+			playerTwo = playerTwo.concat(playerOne.splice(0,index+1));
+			playerTwo.push(playerTwo.shift());
 	} else {
-			console.log("here!")
-			war(index+4);
+			war(index+4) 
+	
 	}
 	console.log(playerOne, playerTwo);
 }
+
 
 
 
@@ -96,6 +104,9 @@ while(playerOne.length != 0 && playerTwo.length != 0) {
 	console.log(`turn ${i}`)
 }
 
+// if (playerOne.length < 5 || playerTwo.length < 5) {
+
+// }
 
 // BUILDv3
 
