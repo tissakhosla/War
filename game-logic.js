@@ -33,19 +33,23 @@ console.log(playerOne, playerTwo);
 // var playerTwo = new(deckTwo, inPlayTwo);
 
 // BUILD v4
+for (var i = 1; i <= 10; i++) {
+	if (playerOne[0] === playerTwo[0]) {
+		console.log("it's a tie! HOORAY")
+		console.log(playerOne, playerTwo);
+	} else if (playerOne[0] > playerTwo[0]) {
+			console.log("-----*One*-----");
+			playerOne.push(playerTwo.shift());
+			playerOne.push(playerOne.shift());
+			console.log(playerOne, playerTwo);
+		} else if (playerTwo[0] > playerOne[0]) {
+				console.log("-----*Two*-----")
+				playerTwo.push(playerOne.shift());
+				playerTwo.push(playerOne.shift());
+				console.log(playerOne, playerTwo);
+			}
+}
 
-if (playerOne[0] === playerTwo[0]) {
-	console.log("it's a tie! HOORAY")
-} else if (playerOne[0] > playerTwo[0]) {
-		console.log("-----*One*-----");
-		playerOne.push(playerTwo.shift());
-		playerOne.push(playerOne.shift());
-	} else if (playerTwo[0] < playerOne[0]) {
-			console.log("-----*Two*-----")
-			playerTwo.push(playerOne.shift())
-			playerTwo.push(playerOne.shift())
-		}
-console.log("This is the end")
 
 // BUILDv3
 
