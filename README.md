@@ -1,2 +1,3 @@
-# War
-The Game of War
+# Project 2
+## The Card Game War
+
