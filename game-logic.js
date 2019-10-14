@@ -58,9 +58,13 @@ console.log(playerOne, playerTwo);
 function war(index) {
 	if (index > 3) {
 			alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`);
-			index = Math.min(index, Math.min(playerOne.length, playerTwo.length) - 1)
+	}
+
+	index = Math.min(index, Math.min(playerOne.length, playerTwo.length) - 1)
+
+	if (index > 3) {
 			alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`)
-		}
+	}
 		
 
 	if (playerOne[index] > playerTwo[index]) {
@@ -72,8 +76,10 @@ function war(index) {
 			playerTwo = playerTwo.concat(playerOne.splice(0,index+1));
 			playerTwo.push(playerTwo.shift());
 	} else {
+			if(index === playerOne.length - 1 || index === playerTwo.length - 1) {
+				alert(`Game over\n${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`);
+			}
 			war(index+4) 
-	
 	}
 	console.log(playerOne, playerTwo);
 }
