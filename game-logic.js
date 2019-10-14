@@ -21,50 +21,19 @@ for(var i = 1; i <= 26 ; i++) {
 console.log("Dealt the cards.")
 console.log(playerOne, playerTwo);
 
-// //create player class
-// class player {
-// 	constructor(hand, inPlay) {
-// 	this.hand = hand,
-// 	this.inPlay = inPlay
-// 	}
-// }
-// //create 2 players
-// var playerOne = new(deckOne, inPlayOne);
-// var playerTwo = new(deckTwo, inPlayTwo);
 
-// Function passing in an index 
-// function gameLogic(index) {
-// 	for (var i = 1; i <= 10; i++) {
-// 		if (playerOne[index] === playerTwo[index]) {
-// 			console.log("___o_0--->WAR<---O_o___")
-// 			//the game function on playerNum[4]
-			
-// 		} else if (playerOne[index] > playerTwo[index]) {
-// 				console.log("-----*One*-----");
-// 				playerOne.push(playerTwo.shift());
-// 				playerOne.push(playerOne.shift());
-				
-// 			} else if (playerTwo[index] > playerOne[index]) {
-// 					console.log("-----*Two*-----")
-// 					playerTwo.push(playerOne.shift());
-// 					playerTwo.push(playerOne.shift());
-					
-// 				}
-// 	return console.log(playerOne, playerTwo);
-// }
 
-// gameLogic(0);
 //WAR
 function war(index) {
-	if (index > 3) {
-			alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`);
-	}
+	// if (index > 3) {
+	// 		alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`);
+	// }
 
 	index = Math.min(index, Math.min(playerOne.length, playerTwo.length) - 1)
 
-	if (index > 3) {
-			alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`)
-	}
+	// if (index > 3) {
+	// 		alert(`${index}\n${playerOne.length} --- ${playerOne}\n${playerTwo.length} --- ${playerTwo}`)
+	// }
 		
 
 	if (playerOne[index] > playerTwo[index]) {
@@ -86,9 +55,7 @@ function war(index) {
 
 
 
-
-// BUILD v4
-// for (var i = 1; i <= 100; i++) {
+// BUILD v5
 var i = 0
 while(playerOne.length != 0 && playerTwo.length != 0) {
 	if (playerOne[0] === playerTwo[0]) {
@@ -109,64 +76,3 @@ while(playerOne.length != 0 && playerTwo.length != 0) {
 	i++;
 	console.log(`turn ${i}`)
 }
-
-// if (playerOne.length < 5 || playerTwo.length < 5) {
-
-// }
-
-// BUILDv3
-
-// while(playerOne.length != 0 || playerTwo.length != 0) {
-// 	if (playerOne[0] === playerTwo[0]) {
-// 		console.log("it's a tie! HOORAY")
-// 	} else if (playerOne[0] > playerTwo[0]) {
-// 			console.log("-----*One*-----");
-// 			playerOne.push(playerTwo.shift());
-// 			playerOne.push(playerOne.shift());
-// 		} else if (playerTwo[0] < playerOne[0]) {
-// 				console.log("-----*Two*-----")
-// 				playerTwo.push(playerOne.shift())
-// 				playerTwo.push(playerOne.shift())
-// 			} 
-// }
-
-
-//compare indices
-//BUILD v1
-// var m = 0
-// for (var m = 0; m < deck.length; m++) {
-// 	if(playOne[m] > playTwo[m]) {
-// 		console.log("-----*One*-----");
-// 		playOne.push(playTwo.shift());
-// 		playOne.push(playOne.shift());
-// 		console.log(playOne, playTwo);
-		
-// 	}
-// 		else if (playTwo[m] > playOne[m]) {
-// 			console.log("-----*Two*-----");
-// 			playTwo.push(playOne.shift());
-// 			playTwo.push(playTwo.shift());
-// 					console.log(playOne, playTwo);
-	
-// 		} 
-// 			else (playOne[m] === playTwo[m]) {
-// 				console.log("Peace!");
-// 			}
-// }
-// BUILD v2
-// var m = 0
-// while(m === 0) {
-// 	if (playOne[m] === playTwo[m]) {
-// 		console.log("Peace!")
-// 	} else if (playOne[m] > playTwo[m]) {
-// 			console.log("-----*One*-----")
-// 			playOne.push(playTwo.shift())
-// 			playOne.push(playOne.shift())
-// 			console.log(playOne, playTwo);
-// 			} else (playTwo[m] > playOne[m]) {
-// 					console.log("-----*Two*-----")
-// 					playTwo.push(playOne.shift())
-// 					playTwo.push(playTwo.shift())
-// 					console.log(playOne, playTwo);
-// 			}
-// }
