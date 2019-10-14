@@ -8,8 +8,8 @@
 1. JS Math object Comparisons
 
 ### Considerations:
-1. Because I was concerned about missing 2 days, I began concieving of the game without a familiarity with classes and objects. 
-1. With this in mind, it occurred that I did not need to worry about the suites, just the rank in this game. 
+1. Because I was concerned about missing 2 days, I began conceiving of the game without a familiarity with classes and objects. 
+1. With this in mind, it occurred that I did not need to worry about the suits, just the rank in this game. 
 
 ### Process
 1. Began building the basic game, and testing it running a set number of turns.
