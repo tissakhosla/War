@@ -7,6 +7,10 @@
 1. Indices
 1. JS Math object Comparisons
 
+### The Game:
+1. Once the document is opened, the game plays itself. 
+1. Open the console to see every single turn and each player's deck. 
+
 ### Considerations:
 1. Because I was concerned about missing 2 days, I began conceiving of the game without a familiarity with classes and objects. 
 1. With this in mind, it occurred that I did not need to worry about the suits, just the rank in this game. 
